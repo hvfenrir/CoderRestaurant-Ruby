@@ -1,0 +1,47 @@
+<h1 class="text-xs-center">Menu</h1>
+<div class="menu-list">
+	<div class="container">
+		<div class="section">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<%= link_to 'All', menu_path, class: "nav-link #{params[:section] ? '': 'active'}" %>
+				</li>
+				<% @sections.each do |section| %>
+				<li class="nav-item">
+					<%= link_to section,menu_path(section: section), class: "nav-link #{params[:section] == section && 'active'}" %>
+				</li>
+				<% end %>
+				<li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sort by</a>
+				    <div class="dropdown-menu">
+				    <% @sort_types.each do |sort| %>
+				      <%= link_to sort, menu_path(section: params[:section], sort: sort), class: "dropdown-item" %>
+				   
+				      <% end %>
+				    </div>
+				    
+				  </li>
+			</ul>
+		</div>
+		<% @food_items.each do |item| %>
+		<div class="col-md-4 col-lg-4">
+		  <!-- <img class="card-img-top" data-src="..." alt="Card image cap"> -->
+		  <div class="card">
+		  	  <%= image_tag item.img_url_or_auto ,class: 'card-img-top img-url-item' %>
+			  <div class="card-block">
+			    <h4 class="card-title"><%=link_to item.name, item %></h4>
+			    <p class="card-text desc"><%=item.description%></p>
+			    <p class="card-text"><%=item.price%> VND</p>
+			    <!-- <a href="#" class="btn btn-primary">Order</a> -->
+			    <%= link_to 'Order', new_food_order_path(item), class: "btn btn-primary" %>
+			  </div>
+			</div>
+		</div>
+		
+
+		<% end %>
+		<br>
+		<%= paginate @food_items %>
+		<%= page_entries_info @food_items %>
+	</div>
+</div>

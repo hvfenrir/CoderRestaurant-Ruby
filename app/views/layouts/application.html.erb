@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CoderRestaurant</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-inverse">
+  <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+    &#9776;
+  </button>
+    <%= link_to 'Restaurant', root_path , class: "navbar-brand" %>
+  <div class="collapse navbar-toggleable-xs " id="exCollapsingNavbar2">
+    <ul class="nav navbar-nav pull-lg-right">
+      <li class="nav-item active">
+         <%= link_to 'Home', root_path , class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Menu", menu_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Contact", contact_path, class: "nav-link" %>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+<% if flash[:error]%>
+  <div class="alert alert-danger"><%=flash[:error]%></div>
+<% end %>
+<% if flash[:success]%>
+  <div class="alert alert-success"><%=flash[:success]%></div>
+<% end %>
+<%= yield %>
+
+</body>
+</html>

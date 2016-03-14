@@ -1,0 +1,18 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+
+  <div class="col-sm-5">
+      <!-- <img class="card-img-top" data-src="..." alt="Card image cap"> -->
+      <div class="card text-xs-center">
+          <%= image_tag @food.img_url_or_auto ,class: 'card-img-top img-url-item' %>
+        <div class="card-block">
+          <h4 class="card-title"><%=link_to @food.name, @food %></h4>
+          <p class="card-text"><%=@food.description%></p>
+          <p class="card-text"><%=@food.price%> VND</p>
+          <!-- <a href="#" class="btn btn-primary">Order</a> -->
+          <%= link_to 'Order', new_food_order_path(@food), class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
