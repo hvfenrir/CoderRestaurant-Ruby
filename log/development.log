@@ -17048,3 +17048,313 @@ Started GET "/contact" for ::1 at 2016-03-14 20:26:40 +0700
 Processing by WelcomeController#contact as HTML
   Rendered welcome/contact.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 225ms (Views: 223.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu" for ::1 at 2016-03-14 20:43:08 +0700
+Processing by MenuController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/menu?sort=Price+low+to+high" for ::1 at 2016-03-14 20:43:14 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"sort"=>"Price low to high"}
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods"  ORDER BY price LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/menu?section=Lunch" for ::1 at 2016-03-14 20:46:03 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Lunch"}
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Lunch"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Lunch"]]
+  Rendered menu/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 68ms (Views: 66.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/menu?section=Breakfast" for ::1 at 2016-03-14 20:46:04 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Breakfast"}
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Breakfast"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Breakfast"]]
+  Rendered menu/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/menu?section=Dinner" for ::1 at 2016-03-14 20:46:06 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Dinner"}
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Dinner"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Dinner"]]
+  Rendered menu/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/menu?section=Drinks" for ::1 at 2016-03-14 20:46:06 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Drinks"}
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Drinks"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Drinks"]]
+  Rendered menu/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/menu?section=Dinner" for ::1 at 2016-03-14 20:46:08 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Dinner"}
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Dinner"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Dinner"]]
+  Rendered menu/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 80ms (Views: 78.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/menu?section=Dinner" for ::1 at 2016-03-14 20:46:36 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Dinner"}
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Dinner"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Dinner"]]
+  Rendered menu/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/application.self-873e87dc2f57542e1aa162bbc4d43c0710573ea26ad8c448f0be8d8155804e56.css?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/carousel.self-8e572923c87f450d7f38176167d96a27913dac0771100278265523b97f2bb074.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/button.self-9a46ecb8ace47b217ba3ee88c7a8c7572b0ef75e77fff1b4e32ddf00af7fefe4.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/alert.self-44483afe785e8334f25977de4cc25db3b8ca7ef953e60d2eeda2deeeccfda56e.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/util.self-259befb5ba307350f3ed40e4ff1d27e6268e407ee0da02fd46435784459fc746.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/collapse.self-4f8619d8d3fb252be59e65ef55b5a91dee275861b5d729c7e64f55091266984e.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/dropdown.self-77fbc8160624d6515b5d55fa40e7e7ba8f4ebe526b6007fe5a6bbc4437b46a1e.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/modal.self-83fa21d21f8b68b3389ce5018b81be0ad967d65f1e08e3acd0d5c804e31e64a7.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/scrollspy.self-7474c149d14b6006919c68e8dd36423c169ef1c15b54a701b82e3931831fa434.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/tab.self-7249bd863668fd4b877386598154c53466a77a853ae4d9ee2c45476fa3a361eb.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/tooltip.self-ff495cd6932165d4adceb3a8baec7340536f4d26b2fa14cd202e651ccc7f513a.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap/popover.self-1b1efcd196ba075b0e9b7962c2a7631c8d7bcc7010e0140ad2c071cb0594a1d9.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/bootstrap-sprockets.self-636159b35205da4142a43bc02d2849d77d3ac07a0946211585cde15a9c6ff21f.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/foods.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/menu.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-03-14 20:46:36 +0700
+
+
+Started GET "/" for ::1 at 2016-03-14 20:46:45 +0700
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2016-03-14 20:48:06 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu" for ::1 at 2016-03-14 20:48:13 +0700
+Processing by MenuController#index as HTML
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 80ms (Views: 76.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/menu?section=Breakfast" for ::1 at 2016-03-14 20:48:17 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Breakfast"}
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Breakfast"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Breakfast"]]
+  Rendered menu/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 90ms (Views: 87.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/menu?section=Breakfast&sort=Z-A" for ::1 at 2016-03-14 20:48:20 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Breakfast", "sort"=>"Z-A"}
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1  ORDER BY name desc LIMIT 5 OFFSET 0[0m  [["section", "Breakfast"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Breakfast"]]
+  Rendered menu/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/menu?section=Breakfast&sort=Price+high+to+low" for ::1 at 2016-03-14 20:48:22 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Breakfast", "sort"=>"Price high to low"}
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1  ORDER BY price desc LIMIT 5 OFFSET 0[0m  [["section", "Breakfast"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Breakfast"]]
+  Rendered menu/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/menu?section=Dinner" for ::1 at 2016-03-14 20:48:24 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Dinner"}
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Dinner"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Dinner"]]
+  Rendered menu/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 84ms (Views: 81.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/menu?section=Dinner&sort=A-Z" for ::1 at 2016-03-14 20:48:26 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Dinner", "sort"=>"A-Z"}
+  [1m[36mFood Load (1.0ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1  ORDER BY name LIMIT 5 OFFSET 0[0m  [["section", "Dinner"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Dinner"]]
+  Rendered menu/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 73ms (Views: 70.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/menu" for ::1 at 2016-03-14 20:48:28 +0700
+Processing by MenuController#index as HTML
+  [1m[36mFood Load (1.9ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 100ms (Views: 95.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/menu?page=5" for ::1 at 2016-03-14 20:48:30 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"page"=>"5"}
+  [1m[36mFood Load (0.7ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 20[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/menu?page=2" for ::1 at 2016-03-14 20:48:32 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mFood Load (0.5ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/menu?sort=Price+low+to+high" for ::1 at 2016-03-14 20:48:35 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"sort"=>"Price low to high"}
+  [1m[36mFood Load (0.5ms)[0m  [1mSELECT  "foods".* FROM "foods"  ORDER BY price LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/menu?section=Drinks" for ::1 at 2016-03-14 20:48:38 +0700
+Processing by MenuController#index as HTML
+  Parameters: {"section"=>"Drinks"}
+  [1m[36mFood Load (0.7ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."section" = $1 LIMIT 5 OFFSET 0[0m  [["section", "Drinks"]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "foods" WHERE "foods"."section" = $1  [["section", "Drinks"]]
+  Rendered menu/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 96ms (Views: 93.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/foods/19" for ::1 at 2016-03-14 20:48:40 +0700
+Processing by FoodsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered foods/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/foods/19/orders/new" for ::1 at 2016-03-14 20:48:45 +0700
+Processing by OrdersController#new as HTML
+  Parameters: {"food_id"=>"19"}
+  [1m[35mFood Load (0.6ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered orders/new.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 83ms (Views: 76.5ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/foods/19/orders" for ::1 at 2016-03-14 20:49:05 +0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rs6+1T9z3huU8cVtEH0pW+79clW33XNsvSmllr/ckxK7P74hJF/dhgDq5mq5BACp9jlScfjB06CuW6NtIpI/9A==", "order"=>{"name"=>"Vinh", "phone"=>"098732383", "address"=>"98 Chien Thang Phu Nhuan"}, "commit"=>"Create Order", "food_id"=>"19"}
+  [1m[36mFood Load (0.2ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "orders" ("name", "phone", "address", "food_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Vinh"], ["phone", "098732383"], ["address", "98 Chien Thang Phu Nhuan"], ["food_id", 19], ["created_at", "2016-03-14 13:49:05.811829"], ["updated_at", "2016-03-14 13:49:05.811829"]]
+  [1m[35m (11.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/menu
+Completed 302 Found in 33ms (ActiveRecord: 20.5ms)
+
+
+Started GET "/menu" for ::1 at 2016-03-14 20:49:05 +0700
+Processing by MenuController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/foods/2/orders/new" for ::1 at 2016-03-14 20:49:08 +0700
+Processing by OrdersController#new as HTML
+  Parameters: {"food_id"=>"2"}
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered orders/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/foods/2/orders" for ::1 at 2016-03-14 20:49:12 +0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OYCNs53O9/QGmNG1boxSJfHA8YYsHAv97nFQrI2p+ATEcY1HhuL0aZKD8rLH9XvX6QTRomMAqzH9A1ZXEOdU4g==", "order"=>{"name"=>"", "phone"=>"", "address"=>""}, "commit"=>"Create Order", "food_id"=>"2"}
+  [1m[35mFood Load (0.2ms)[0m  SELECT  "foods".* FROM "foods" WHERE "foods"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  Rendered orders/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 66ms (Views: 58.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contact" for ::1 at 2016-03-14 20:49:21 +0700
+Processing by WelcomeController#contact as HTML
+  Rendered welcome/contact.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/menu" for ::1 at 2016-03-14 20:49:27 +0700
+Processing by MenuController#index as HTML
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT  "foods".* FROM "foods" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "foods"
+  Rendered menu/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.6ms)
